@@ -11,5 +11,17 @@ public class datasetFormulas
         if(arr.Length % 2 == 0) return (arr[arr.Length / 2] + arr[(arr.Length / 2) - 1]) / 2;
         return arr[Convert.ToInt16((arr.Length / 2) - 0.5)];
     }
-    
+
+    public static double findRange(double[] arr) {
+        return arr[arr.Length - 1] - arr[0];
+    }
+
+    public static double findIQR(double[] arr) {
+        int splitIndex = 0;
+        if(arr.Length % 2 == 0) splitIndex = arr.Length / 2;
+        if(arr.Length % 2 != 0) splitIndex = Convert.ToInt16((arr.Length / 2) - 0.5);
+        double[] subArrayOne = new double[splitIndex];
+        double[] subArrayTwo = new double[arr.Length - splitIndex];
+        return findMedian(subArrayTwo) - findMedian(subArrayOne);
+    }
 }
