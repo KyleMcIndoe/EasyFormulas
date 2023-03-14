@@ -22,6 +22,8 @@ public class datasetFormulas
         if(arr.Length % 2 != 0) splitIndex = Convert.ToInt16((arr.Length / 2) - 0.5);
         double[] subArrayOne = new double[splitIndex];
         double[] subArrayTwo = new double[arr.Length - splitIndex];
+        for(int i = 0; i < splitIndex; i++) subArrayOne[i] = arr[i];
+        for(int i = splitIndex; i < arr.Length; i++) subArrayTwo[i] = arr[i];
         return findMedian(subArrayTwo) - findMedian(subArrayOne);
     }
 }
