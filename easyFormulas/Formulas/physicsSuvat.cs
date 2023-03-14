@@ -1,7 +1,7 @@
 ﻿namespace physicsSuvat;
 public static class suvatFormulas
 {
-    public class withoutDisplacement {
+    public class withoutDisplacement { // Find initial velocity, final velocity, acceleration and time without displacement
         public static double uwithouts(double v, double a, double t) {
             return v - (a * t);
         }
@@ -18,7 +18,7 @@ public static class suvatFormulas
             return (v - u) / a;
         }
     }
-    public class withoutInitialVelocity {
+    public class withoutInitialVelocity { // Find displacement, final velocity, acceleration and time without initial velocity
         public static double swithoutu(double v, double a, double t) {
             return (v * t) - (0.5 * a * (t * t));
         }
@@ -35,7 +35,7 @@ public static class suvatFormulas
             return (v - Math.Sqrt((v * v) - 2 * a * s)) / a;
         }
     }
-    public class withoutFinalVelocity {
+    public class withoutFinalVelocity { // Find displacement, initial velocity, acceleration and time without final velocity
         public static double swithoutv(double u, double a, double t) {
             return (u * t) + (0.5 * a * (t * t));
         }
@@ -52,7 +52,7 @@ public static class suvatFormulas
             return (Math.Sqrt(2 * a * s + (u * u)) - u) / a;
         }
     }
-    public class withoutAcceleration {
+    public class withoutAcceleration { // Find displacement, initial velocity, final velocity and time without acceleration
         public static double swithouta(double u, double v, double t) {
             return (t / 2) * (u + v);
         }
@@ -69,7 +69,7 @@ public static class suvatFormulas
             return (2 * s) / (u + v);
         }
     }
-    public class withoutTime {
+    public class withoutTime { // Find displacement, initial velocity, final velocity and acceleration without time
         public static double swithoutt(double u, double v, double a) {
             return ((u * u) + (v * v)) / (2 * a);
         }
