@@ -1,6 +1,6 @@
 namespace mathProbabilities;
 
-public class probabilityFormulas {
+public static class probabilityFormulas {
     public static double missingProbability(double[] arr) {
         double ans = 1;
         for(int i = 0; i < arr.Length; i++) {
