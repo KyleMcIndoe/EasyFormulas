@@ -7,3 +7,17 @@ public class fraction{
         denominator = denom;
     }
 }
+
+public static class fractionFormulas {
+    public static decimal toDecimal(fraction F) {
+        return F.numerator / F.denominator;
+    }
+
+    public static double toDouble(fraction F) {
+        return F.numerator / F.denominator;
+    }
+    
+    public static float toFloat (fraction F) {
+        return F.numerator / F.denominator;
+    }
+}
