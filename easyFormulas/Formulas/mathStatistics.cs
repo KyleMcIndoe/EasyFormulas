@@ -1,4 +1,4 @@
-namespace mathStatistics;
+
 public static class datasetFormulas 
 {
     public static double findSum (double[] arr) { // Find sum of dataset

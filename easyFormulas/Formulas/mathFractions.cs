@@ -1,4 +1,4 @@
-namespace mathFractions;
+
 public class fraction{
     public int numerator;
     public int denominator;
@@ -20,4 +20,9 @@ public static class fractionFormulas {
     public static float toFloat (fraction F) {
         return F.numerator / F.denominator;
     }
+
+    public static string toPercent (fraction F) {
+        return ("%" + toDecimal(F));
+    }
+
 }

@@ -1,4 +1,4 @@
-namespace mathProbabilities;
+
 
 public static class probabilityFormulas {
     public static double missingProbability(double[] arr) {

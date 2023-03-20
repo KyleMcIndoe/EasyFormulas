@@ -1,4 +1,4 @@
-﻿namespace physicsSuvat;
+﻿
 public static class suvatFormulas
 {
     public static class withoutDisplacement { // Find initial velocity, final velocity, acceleration and time without displacement
