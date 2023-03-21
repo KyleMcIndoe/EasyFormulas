@@ -24,5 +24,11 @@ public static class fractionFormulas {
     public static string toPercent (fraction F) {
         return ("%" + toDecimal(F));
     }
-
+    
+    public static fraction add(fraction a, fraction b){
+        int commonDenominator = a.denominator * b.denominator;
+        a.numerator = a.numerator * (commonDenominator / a.denominator);
+        b.numerator = b.numerator * (commonDenominator / b.denominator);
+        return new fraction(a.numerator + a.denominator, commonDenominator);
+    }
 }
