@@ -29,6 +29,24 @@ public static class fractionFormulas {
         int commonDenominator = a.denominator * b.denominator;
         a.numerator = a.numerator * (commonDenominator / a.denominator);
         b.numerator = b.numerator * (commonDenominator / b.denominator);
-        return new fraction(a.numerator + a.denominator, commonDenominator);
+        return new fraction(a.numerator + b.numerator, commonDenominator);
+    }
+
+    public static fraction subtract(fraction a, fraction b) {
+        int commonDenominator = a.denominator * b.denominator;
+        a.numerator = a.numerator * (commonDenominator / a.denominator);
+        b.numerator = b.numerator * (commonDenominator / b.denominator);
+        return new fraction(a.numerator - b.numerator, commonDenominator);       
+    }
+
+    public static fraction multiply(fraction a, fraction b) {
+        return new fraction(a.numerator * b.numerator, a.denominator * b.denominator);
+    }
+
+    public static fraction divide(fraction a, fraction b) {
+        int place = b.numerator;
+        b.numerator = b.denominator;
+        b.denominator = place;
+        return multiply(a, b);
     }
 }
