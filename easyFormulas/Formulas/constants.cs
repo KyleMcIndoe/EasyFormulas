@@ -1,5 +1,5 @@
 
-public static class importantNumbers { // most formulas are taken from IB physics data booklet, please fix if one is rounded
+public static class constants { // most formulas are taken from IB physics data booklet, please fix if one is rounded
     public const double gravity = 9.81;
     public const double avogadrosNumber = 6.0221515e23;
     public const double pi = 3.141592654; // this is how pi appears on a ti-84
