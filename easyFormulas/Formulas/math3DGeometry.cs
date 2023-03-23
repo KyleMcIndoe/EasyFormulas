@@ -8,6 +8,15 @@ public static class cuboid {
     }
 }
 
+public static class sphere {
+    public static double volume(double radius) {
+        return (4/3) * constants.pi * (radius * radius * radius);
+    }
+
+    public static double surfaceArea(double radius) {
+        return 4 * constants.pi * (radius * radius);
+    }
+}
 public static class cylinder {
     public static double volume(double radius, double height) {
         return circleFormulas.area(radius) * height;
