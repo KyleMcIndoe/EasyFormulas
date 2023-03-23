@@ -30,3 +30,13 @@ public static class cylinder {
         return (2 * circleFormulas.area(radius)) + areaOfCurvedPart(radius, height);
     }
 }
+
+public static class cone {
+    public static double volume(double radius, double height) {
+        return (1/3) * constants.pi * (radius * radius) * height;
+    }
+
+    public static double areaOfCurvedPart(double radius, double height) {
+        return radius * height * constants.pi;
+    }
+}
