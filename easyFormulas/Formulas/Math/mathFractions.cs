@@ -9,6 +9,10 @@ public class fraction{
 }
 
 public static class fractionFormulas {
+    public static fraction toFraction(double x) {
+        return new fraction((int)x * 100, 100);
+    } // just converts it to x / 100, should probably be simplified once simplify function is added
+
     public static decimal toDecimal(fraction F) {
         return F.numerator / F.denominator;
     }
