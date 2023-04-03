@@ -53,4 +53,24 @@ public static class fractionFormulas {
         b.denominator = place;
         return multiply(a, b);
     }
+
+    public static fraction simplify(fraction frac) // Taken from GeeksForGeeks
+    {
+        int x = frac.numerator;
+        int y = frac.denominator;
+        int d;
+        d = gcd(x, y);
+    
+        x = x / d;
+        y = y / d;
+    
+        return new fraction(x, y);
+    }
+    static int gcd(int a, int b)
+    {
+        if (b == 0)
+            return a;
+        return gcd(b, a % b);
+        
+}
 }
