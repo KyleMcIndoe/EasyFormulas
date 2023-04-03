@@ -1,3 +1,13 @@
+public static class rectangles{
+    public static double area(double length, double width) {
+        return length * width;
+    }
+    
+    public static double perimeter(double length, double width) {
+        return (length + width) * 2;
+    }
+}
+
 public static class circleFormulas{
     public static double area(double radius) {
         return constants.pi * (radius * radius);
