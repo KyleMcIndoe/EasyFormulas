@@ -2,9 +2,8 @@ public class listNode { // linked list
     public int? val;
     public listNode? next;
 
-    public listNode(int x, listNode y) {
+    public listNode(int x) {
         val = x;
-        next = y;
     }
 }
 
@@ -25,9 +24,8 @@ public class doubleListNode { // doubly linked list
     public doubleListNode? prev;
     public doubleListNode? next;
 
-    public doubleListNode(int x, doubleListNode y, doubleListNode z) {
+    public doubleListNode(int x, doubleListNode y) {
         val = x;
         prev = y;
-        next = z;
     }
 }
