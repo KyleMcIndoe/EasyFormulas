@@ -1,6 +1,6 @@
 public class listNode { // linked list
-    int? val;
-    listNode? next;
+    public int? val;
+    public listNode? next;
 
     public listNode(int x, listNode y) {
         val = x;
@@ -9,9 +9,9 @@ public class listNode { // linked list
 }
 
 public class treeNode { // binary tree
-    int? val;
-    treeNode? left;
-    treeNode? right;
+    public int? val;
+    public treeNode? left;
+    public treeNode? right;
 
     public treeNode(int x, treeNode y, treeNode z) {
         val = x;
@@ -21,9 +21,9 @@ public class treeNode { // binary tree
 }
 
 public class doubleListNode { // doubly linked list
-    int? val;
-    doubleListNode? prev;
-    doubleListNode? next;
+    public int? val;
+    public doubleListNode? prev;
+    public doubleListNode? next;
 
     public doubleListNode(int x, doubleListNode y, doubleListNode z) {
         val = x;
