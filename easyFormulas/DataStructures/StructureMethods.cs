@@ -24,4 +24,28 @@ public static class linkedListMethods {
         head.next = null;
         return last;
     }
+
+    public static listNode shift(listNode head) { // takes away the node at the start of the list and returns it
+        listNode x = head;
+        if(head.next == null) return head;
+        head = head.next;
+        x.next = null;
+        return x;
+    }
+}
+
+public static class treeMethods {
+    public static void invert(treeNode node) {
+        if(node.left == null && node.right == null) return;  
+        treeNode? place = node.left;
+        node.left = node.right;
+        node.right = place;
+
+        if(node.left != null) invert(node.left);
+        if(node.right != null) invert(node.right);
+    }
+}
+
+public static class bstMethods { // binary search tree
+
 }
