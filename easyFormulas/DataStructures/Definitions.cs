@@ -29,3 +29,11 @@ public class doubleListNode { // doubly linked list
         prev = y;
     }
 }
+
+public class stack {
+    // TODO
+}
+
+public class heap {
+    // TODO
+}
