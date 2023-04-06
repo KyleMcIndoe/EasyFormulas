@@ -44,8 +44,28 @@ public static class treeMethods {
         if(node.left != null) invert(node.left);
         if(node.right != null) invert(node.right);
     }
+
+
+    public static listNode flatten(treeNode node) { // flatten tree to linked list
+        listNode listHead = new listNode(node.val);
+
+        void addToList(treeNode x, listNode list) {
+            int val = x.val;
+            linkedListMethods.push(val, list);
+
+            if(x.left != null) addToList(x.left, list);
+            if(x.right != null) addToList(x.right, list);
+        }
+
+        if(node.left != null)addToList(node.left, listHead);
+        if(node.right != null)addToList(node.right, listHead);
+
+        return listHead;
+    }
 }
 
 public static class bstMethods { // binary search tree
+    public static void add(int x) {
 
+    }
 }
