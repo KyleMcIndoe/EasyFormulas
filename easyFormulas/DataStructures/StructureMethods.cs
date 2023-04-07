@@ -45,7 +45,6 @@ public static class treeMethods {
         if(node.right != null) invert(node.right);
     }
 
-
     public static listNode flatten(treeNode node) { // flatten tree to linked list
         listNode listHead = new listNode(node.val);
 
@@ -61,6 +60,26 @@ public static class treeMethods {
         if(node.right != null)addToList(node.right, listHead);
 
         return listHead;
+    }
+
+    public static int minimum(treeNode node) { // returns the minimum value of the bst
+        int record = 0;
+        void search(treeNode x) {
+            if(x.val < record) record = x.val;
+            if(x.left != null) search(x.left);
+            if(x.right != null) search(x.right);
+        }
+        return record;
+    }
+
+    public static int maximum(treeNode node) { // returns the maximum value of the bst
+        int record = 0;
+        void search(treeNode x) {
+            if(x.val > record) record = x.val;
+            if(x.left != null) search(x.left);
+            if(x.right != null) search(x.right);
+        }
+        return record;
     }
 }
 
