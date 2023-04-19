@@ -17,4 +17,13 @@ public class doubleListNode {
         prev = p;
         next = n;
     }
+
+    int findLength(doubleListNode head) {
+        int count = 1;
+        while(head.next != null) {
+            head = head.next;
+            count++;
+        }
+        return count;
+    }
 }
