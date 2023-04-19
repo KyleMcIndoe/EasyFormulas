@@ -17,7 +17,7 @@ public class listNode {
     }
 
     listNode pop(listNode head) { // remove node at end of list and return it
-        return head; // TODO
+        return head;// cant make anything without the compiler screaming at me
     }
 
     listNode shift(listNode head) { // remove node from start of list and return it
