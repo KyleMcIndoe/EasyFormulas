@@ -23,4 +23,17 @@ public class BSTnode {
         if(node.left != null) invert(node.left);
         if(node.right != null) invert(node.right);
     }
+
+    bool isValid(BSTnode node) { // checks wether its a valid bst
+        bool checkNode(BSTnode x) {
+            if(x.left == null || x.right == null) return true;
+            if(x.left.val > x.right.val) return false;
+            if(x.left != null) checkNode(x.left);
+            if(x.right != null) checkNode(x.right);
+            return true;
+        }
+
+        if(checkNode(node) == false) return false;
+        return true;
+    }
 }
