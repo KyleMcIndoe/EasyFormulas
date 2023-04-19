@@ -24,6 +24,22 @@ public class BSTnode {
         if(node.right != null) invert(node.right);
     }
 
+    void add(int x, BSTnode node) {
+        while(true) {
+            if(x > node.val && node.right == null) {
+                node.right = new BSTnode(x);
+                return;
+            }
+            if(x < node.val && node.left == null) {
+                node.left = new BSTnode(x);
+                return;
+            }
+
+            if(x > node.val && node.right != null) node = node.right;
+            if(x < node.val && node.left != null) node = node.left;
+        }
+    }
+
     bool isValid(BSTnode node) { // checks wether its a valid bst
         bool checkNode(BSTnode x) {
             if(x.left == null || x.right == null) return true;
