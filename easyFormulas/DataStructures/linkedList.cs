@@ -41,4 +41,19 @@ public class listNode {
         }
         return count;
     }
+
+    listNode removeAtIndex(int x, listNode head) {
+        if(x > findLength(head)) throw new Exception("Index does not exist");
+        for(int i = 0; i < x; i++) {
+            if(head.next != null) head = head.next; // if statement to make compiler shut up
+        }
+        
+        if(head.next != null) { // again, just to make compiler shut up
+            listNode toRemove = head.next;
+            head.next = head.next.next;
+            toRemove.next = null;
+            return toRemove;
+        }
+        return head;
+    }
 }
