@@ -28,9 +28,16 @@ public class doubleListNode {
         head.next = new doubleListNode(head, x);
     }
 
-    doubleListNode pop(doubleListNode head) { // remove node from end of list and return it
-        return head; // TODO
+    doubleListNode pop(doubleListNode head) { // remove node at end of list and return it
+        int len = findLength(head);
+
+        for(int i = 1; i < len && head.next != null; i++) head = head.next;
+        if(head.next == null) return head; // Make compiler shut up
+        doubleListNode toRemove = head.next;
+        head.next = null;
+        return toRemove;
     }
+
 
     doubleListNode shift(doubleListNode head) { // remove node form start of list
         if(head.next == null) return head;

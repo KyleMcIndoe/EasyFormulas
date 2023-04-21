@@ -17,7 +17,13 @@ public class listNode {
     }
 
     listNode pop(listNode head) { // remove node at end of list and return it
-        return head;// cant make anything without the compiler screaming at me
+        int len = findLength(head);
+
+        for(int i = 1; i < len && head.next != null; i++) head = head.next;
+        if(head.next == null) return head; // Make compiler shut up
+        listNode toRemove = head.next;
+        head.next = null;
+        return toRemove;
     }
 
     listNode shift(listNode head) { // remove node from start of list and return it
