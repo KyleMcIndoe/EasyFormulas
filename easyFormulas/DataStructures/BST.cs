@@ -52,4 +52,15 @@ public class BSTnode {
         if(checkNode(node) == false) return false;
         return true;
     }
+
+    int numNodes(BSTnode root) {
+        int count = 0;
+        void countNodes(BSTnode node) {
+            count++;
+            if(node.left != null) countNodes(node.left);
+            if(node.right != null) countNodes(node.right);
+        }
+        countNodes(root);
+        return count;
+    } 
 }

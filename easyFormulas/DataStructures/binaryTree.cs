@@ -21,4 +21,15 @@ public class treeNode {
         if(node.left != null) invert(node.left);
         if(node.right != null) invert(node.right);
     }
+
+    int numNodes(treeNode root) {
+        int count = 0;
+        void countNodes(treeNode node) {
+            count++;
+            if(node.left != null) countNodes(node.left);
+            if(node.right != null) countNodes(node.right);
+        }
+        countNodes(root);
+        return count;
+    } 
 }
