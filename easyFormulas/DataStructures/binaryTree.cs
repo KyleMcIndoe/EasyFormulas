@@ -32,4 +32,15 @@ public class treeNode {
         countNodes(root);
         return count;
     } 
+
+    bool containts(int x, treeNode root) {
+        bool search(treeNode node) {
+            if(node.val == x) return true;
+            if(node.left != null) search(node.left);
+            if(node.right != null) search(node.right);
+            return false;
+        }
+
+        return search(root);
+    }
 }
