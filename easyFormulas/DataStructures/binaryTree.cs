@@ -33,7 +33,7 @@ public class treeNode {
         return count;
     } 
 
-    bool containts(int x, treeNode root) {
+    bool contains(int x, treeNode root) {
         bool search(treeNode node) {
             if(node.val == x) return true;
             if(node.left != null) search(node.left);
