@@ -63,4 +63,15 @@ public class BSTnode {
         countNodes(root);
         return count;
     } 
+
+    bool contains(int x, BSTnode root) {
+        bool search(BSTnode node) {
+            if(node.val == x) return true;
+            if(node.left != null) search(node.left);
+            if(node.right != null) search(node.right);
+            return false;
+        }
+
+        return search(root);
+    }
 }
