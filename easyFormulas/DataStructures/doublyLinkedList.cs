@@ -23,6 +23,11 @@ public class doubleListNode {
         next = n;
     }
 
+    int get(int x, doubleListNode head) {
+        for(int i = 0; i <= x && head.next != null; i++) head = head.next;
+        return head.val;
+    }
+
     void addNode(int x, doubleListNode head) { // add node to end of list
         while(head.next != null) head = head.next;
         head.next = new doubleListNode(head, x);

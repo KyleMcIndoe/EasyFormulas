@@ -11,6 +11,11 @@ public class listNode {
         next = y;
     }
 
+    int get(int x, listNode head) {
+        for(int i = 0; i <= x && head.next != null; i++) head = head.next;
+        return head.val;
+    }
+
     void addNode(int x, listNode head) { // add node to the end of a list
         while(head.next != null) head = head.next;
         head.next = new listNode(x);
