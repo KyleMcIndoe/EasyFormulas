@@ -81,4 +81,14 @@ public class doubleListNode {
         }
         return head;
     }
+
+    bool contains(int x, doubleListNode head) {
+        if(head.val == x) return true;
+        while(head.next != null) {
+            if(head.val == x) return true;
+            if(head.next != null)head = head.next;
+        }
+
+        return false;
+    }
 }

@@ -67,4 +67,14 @@ public class listNode {
         }
         return head;
     }
+
+    bool contains(int x, listNode head) {
+        if(head.val == x) return true;
+        while(head.next != null) {
+            if(head.val == x) return true;
+            if(head.next != null)head = head.next;
+        }
+
+        return false;
+    }
 }
